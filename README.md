@@ -1,10 +1,10 @@
 coisas a fazer da ERS:
-* escopo
-* lista de funcao
-* diagrama de caso de uso
-* especificação de caso de uso
-* modelo conceitual
-* modelo de entidade relacionamento
-* diagrama de classes
+- [x] Escopo
+- [x] Lista de funcões
+- [x] Diagrama de caso de uso
+- [x] Especificação de caso de uso
+- [ ] Modelo conceitual
+- [ ] Modelo de entidade relacionamento
+- [ ] Diagrama de classes
 
 Astah - fazer...
