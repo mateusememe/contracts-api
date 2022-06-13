@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const mysql = require('mysql2')
 const cors = require('cors')
 const app = express()
-const db = require('../config/db.config.js')
+const db = require('./src/config/database')
 
 const corsOptions = {
   origin: 'http://localhost:8081'
@@ -17,26 +17,19 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // MYSQL
-const connection = Database
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to SGC-SYS app." });
 });
 app.get('/api', (req, res) => {
   
-  connection.connect((err) => {
-    if (err) throw err
-    console.log("I'm Connected");
-    res.send("I'm Connected")
+  console.log("I'm Connected");
+  res.send("I'm Connected")
+  const sql = "SELECT * FROM anexo;"
+  db.query(sql, function (err, results) {
+    if (err) throw err;
 
-    const sql = "SELECT * FROM anexo;"
-
-    connection.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("Result: %o", result);
-    });
-  })
-  
-
+    console.log("Result: %o", results);
+  });
 });
 
 app.listen(port, () => {
