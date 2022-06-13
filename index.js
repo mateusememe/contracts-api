@@ -1,6 +1,5 @@
 import express from 'express'
 import bodyParser from 'body-parser'
-import mysql from 'mysql2'
 import cors from 'cors'
 const app = express()
 
@@ -8,7 +7,7 @@ const app = express()
 import router from "./src/routes/routes.js";
 
 const corsOptions = {
-  origin: 'http://localhost:8081'
+  origin: 'http://localhost:8080'
 }
 
 const port = 8000;
@@ -19,11 +18,12 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.use(router);
-// MYSQL
+
+// default route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to SGC-SYS REST API." });
 });
 
 app.listen(port, () => {
-  console.log('Listening on port ' + port);
+  console.log(`Server running in https://localhost:${port}`);
 });
