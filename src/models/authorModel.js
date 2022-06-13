@@ -8,7 +8,6 @@ export const getAuthors = (result) => {
       result(err, null);
     }
     else{
-      console.table(results)
       result(null, results);
     }
   });
