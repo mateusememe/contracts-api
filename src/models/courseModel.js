@@ -13,7 +13,7 @@ export const getCourses = (result) => {
 }
 
 export const getCourseById = (id, result) => { 
-  // Pegar um os curso de id especifico
+  // Pegar um curso de id especifico
   db.query("SELECT * FROM curso WHERE cod = ?", [id], (err, results) => {
     if(err){
       console.error(`### ERROR => "${err}"`);
