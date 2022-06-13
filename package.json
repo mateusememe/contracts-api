@@ -2,10 +2,11 @@
   "name": "contracts-api",
   "version": "1.0.0",
   "description": "An API for my supervised internship",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",

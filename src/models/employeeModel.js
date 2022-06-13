@@ -1,4 +1,4 @@
-const db = require('../config/database');
+import db from '../config/database.js';
 
 export const getEmployees = (result) => { 
   // Pegar todos os funcionarios

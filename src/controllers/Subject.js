@@ -1,4 +1,4 @@
-import { getSubjects, getSubjectById, insertSubject, updateSubjectById, deleteSubjectById } from "../models/subjectModel";
+import { getSubjects, getSubjectById, insertSubject, updateSubjectById, deleteSubjectById } from "../models/subjectModel.js";
 
 
 export const showSubjects = (req, res) => {

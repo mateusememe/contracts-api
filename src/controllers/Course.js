@@ -1,4 +1,4 @@
-import { getCourses, getCourseById, insertCourse, updateCourseById, deleteCourseById } from "../models/CourseModel";
+import { getCourses, getCourseById, insertCourse, updateCourseById, deleteCourseById } from "../models/CourseModel.js";
 
 export const showCourses = (req, res) => {
   getCourses((err, results) => {

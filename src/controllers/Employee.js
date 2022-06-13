@@ -1,4 +1,4 @@
-import { insertEmployee, deleteEmployeeById, getEmployeeById, getEmployees, updateEmployeeById } from "../models/employeeModel";
+import { insertEmployee, deleteEmployeeById, getEmployeeById, getEmployees, updateEmployeeById } from "../models/employeeModel.js";
 
 
 export const showEmployees = (req, res) => {

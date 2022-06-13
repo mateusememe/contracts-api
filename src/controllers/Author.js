@@ -1,4 +1,4 @@
-import { getAuthors, getAuthorById, insertAuthor, updateAuthorById, deleteAuthorById } from "../models/authorModel";
+import { getAuthors, getAuthorById, insertAuthor, updateAuthorById, deleteAuthorById } from "../models/authorModel.js";
 
 export const showAuthors = (req, res) => {
   getAuthors((err, results) => {

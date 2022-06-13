@@ -1,4 +1,4 @@
-const db = require('../config/database');
+import db from '../config/database.js';
 
 export const getAuthors = (result) => { 
   // Pegar todos os autores
@@ -7,8 +7,10 @@ export const getAuthors = (result) => {
       console.error(`### ERROR => "${err}"`);
       result(err, null);
     }
-    else
+    else{
+      console.table(results)
       result(null, results);
+    }
   });
 }
 
