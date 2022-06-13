@@ -7,7 +7,7 @@ export const showAuthors = (req, res) => {
 }
 
 export const showAuthorsById = (req, res) => {
-  getAuthorsById(req.params.id, (err, results) => {
+  getAuthorById(req.params.id, (err, results) => {
     (err) ? res.send(err) : res.json(results);
   });
 }
